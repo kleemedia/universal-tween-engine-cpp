@@ -74,7 +74,6 @@ namespace TweenEngine
 
     TweenManager::TweenManager() : objects()
     {
-        DDLogCVerbose(@"TweenManager Constructor");
         objects.reserve(20);
     }
 
