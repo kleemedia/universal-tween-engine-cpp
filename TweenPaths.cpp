@@ -7,11 +7,11 @@
 
 #include "TweenPaths.h"
 
-#include "Linear.h"
+#include "LinearPath.h"
 #include "CatmullRom.h"
 
 namespace TweenEngine
 {
-    TweenPath &TweenPaths::linear = *(new Linear());
+    TweenPath &TweenPaths::linear = *(new LinearPath());
     TweenPath &TweenPaths::catmullRom = *(new CatmullRom());
 }

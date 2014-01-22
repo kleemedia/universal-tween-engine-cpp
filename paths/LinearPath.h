@@ -5,17 +5,17 @@
 //  Licensed under Apache License 2.0 - http://www.apache.org/licenses/LICENSE-2.0
 //
 
-#ifndef __Linear__
-#define __Linear__
+#ifndef __LinearPath__
+#define __LinearPath__
 
 #include "TweenPath.h"
 
 namespace TweenEngine
 {
-    class Linear : public TweenPath
+    class LinearPath : public TweenPath
     {
         float compute(float t, float *points, int pointsCnt);
     };
 }
 
-#endif /* defined(__Linear__) */
+#endif /* defined(__LinearPath__) */

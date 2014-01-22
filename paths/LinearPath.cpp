@@ -6,11 +6,11 @@
 //
 
 #include <math.h>
-#include "Linear.h"
+#include "LinearPath.h"
 
 namespace TweenEngine
 {
-    float Linear::compute(float t, float *points, int pointsCnt)
+    float LinearPath::compute(float t, float *points, int pointsCnt)
     {
         int segment = (int) floor((pointsCnt-1) * t);
 		segment = segment > 0 ? segment : 0;
