@@ -111,7 +111,7 @@ namespace TweenEngine
 	 * Used for debug purpose. Gets the current number of objects that are
 	 * waiting in the Tween pool.
 	 */
-	int Tween::getPoolSize() { return pool.size(); }
+	size_t Tween::getPoolSize() { return pool.size(); }
     
 	/**
 	 * Increases the minimum capacity of the pool. Capacity defaults to 20.

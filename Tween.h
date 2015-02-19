@@ -73,7 +73,7 @@ namespace TweenEngine
         static void setWaypointsLimit(int limit);
         static const char *getVersion();
         
-        static int getPoolSize();
+        static size_t getPoolSize();
         static void ensurePoolCapacity(int minCapacity);
       
         static Tween &to(Accessor accessor, float duration);

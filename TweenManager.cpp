@@ -41,7 +41,7 @@ namespace TweenEngine
     int getTweensCount(std::vector<BaseTween *> objs)
     {
 		int cnt = 0;
-		for (int i=0, n=objs.size(); i<n; i++)
+		for (int i=0, n=(int)objs.size(); i<n; i++)
         {
             cnt += objs[i]->getTweenCount();
 		}
@@ -51,7 +51,7 @@ namespace TweenEngine
 	int getTimelinesCount(std::vector<BaseTween *> objs)
     {
 		int cnt = 0;
-		for (int i=0, n=objs.size(); i<n; i++)
+		for (int i=0, n=(int)objs.size(); i<n; i++)
         {
             cnt += objs[i]->getTimelineCount();
 		}
@@ -95,7 +95,7 @@ namespace TweenEngine
 	 */
 	void TweenManager::killAll()
     {
-		for (int i=0, n=objects.size(); i<n; i++)
+		for (int i=0, n=(int)objects.size(); i<n; i++)
         {
 			BaseTween *obj = objects[i];
 			obj->kill();
@@ -139,11 +139,11 @@ namespace TweenEngine
         {
 			if (delta >= 0)
             {
-				for (int i=0, n=objects.size(); i<n; i++) objects[i]->update(delta);
+				for (int i=0, n=(int)objects.size(); i<n; i++) objects[i]->update(delta);
 			}
             else
             {
-				for (int i=objects.size()-1; i>=0; i--) objects[i]->update(delta);
+				for (int i=(int)objects.size()-1; i>=0; i--) objects[i]->update(delta);
 			}
 		}
 	}
@@ -155,7 +155,7 @@ namespace TweenEngine
 	 * <p/>
 	 * To get the count of running tweens, see {@link #getRunningTweensCount()}.
 	 */
-	int TweenManager::size() { return objects.size(); }
+	size_t TweenManager::size() { return objects.size(); }
     
 	/**
 	 * Gets the number of running tweens. This number includes the tweens

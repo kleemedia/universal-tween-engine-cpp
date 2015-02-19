@@ -48,7 +48,7 @@ namespace TweenEngine
         void pause();
         void resume();
         void update(float delta);
-        int size();
+        size_t size();
         
         // Debug Helpers
         int getRunningTweensCount();

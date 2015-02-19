@@ -42,7 +42,7 @@ namespace TweenEngine
         T *get();
         void free(T *obj);
         void clear();
-        int size();
+        size_t size();
         void ensureCapacity(int minCapacity);
         
     };
@@ -89,7 +89,7 @@ namespace TweenEngine
 	void  Pool<T>::clear() { objects.clear(); }
     
     template <typename T>
-	int  Pool<T>::size() { return objects.size(); }
+	size_t  Pool<T>::size() { return objects.size(); }
     
     template <typename T>
     void  Pool<T>::ensureCapacity(int minCapacity) { objects.reserve(minCapacity); }
