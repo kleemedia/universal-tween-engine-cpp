@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A41CD101B12EC55001D49EC /* BaseTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD001B12EC55001D49EC /* BaseTween.cpp */; };
+		0A41CD111B12EC55001D49EC /* Tween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD031B12EC55001D49EC /* Tween.cpp */; };
+		0A41CD121B12EC55001D49EC /* TweenEquations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD071B12EC55001D49EC /* TweenEquations.cpp */; };
+		0A41CD131B12EC55001D49EC /* TweenManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD091B12EC55001D49EC /* TweenManager.cpp */; };
+		0A41CD141B12EC55001D49EC /* TweenPaths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD0C1B12EC55001D49EC /* TweenPaths.cpp */; };
+		0A41CD151B12EC55001D49EC /* TweenPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD0E1B12EC55001D49EC /* TweenPool.cpp */; };
+		0A41CD3C1B12EDC4001D49EC /* TweenManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD0A1B12EC55001D49EC /* TweenManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD3D1B12F23F001D49EC /* BaseTween.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD011B12EC55001D49EC /* BaseTween.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD3E1B12F2CF001D49EC /* Pool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD021B12EC55001D49EC /* Pool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD3F1B12F2CF001D49EC /* Tween.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD041B12EC55001D49EC /* Tween.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD401B12F2CF001D49EC /* TweenCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD051B12EC55001D49EC /* TweenCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD411B12F2CF001D49EC /* TweenEquation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD061B12EC55001D49EC /* TweenEquation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD421B12F2CF001D49EC /* TweenEquations.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD081B12EC55001D49EC /* TweenEquations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD431B12F2CF001D49EC /* TweenPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD0B1B12EC55001D49EC /* TweenPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD441B12F2CF001D49EC /* TweenPaths.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD0D1B12EC55001D49EC /* TweenPaths.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD451B12F2CF001D49EC /* TweenPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD0F1B12EC55001D49EC /* TweenPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD461B12F322001D49EC /* Back.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD191B12EC78001D49EC /* Back.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD471B12F322001D49EC /* Bounce.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD1B1B12EC78001D49EC /* Bounce.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD481B12F322001D49EC /* Circ.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD1D1B12EC78001D49EC /* Circ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD491B12F322001D49EC /* Cubic.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD1F1B12EC78001D49EC /* Cubic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD4A1B12F322001D49EC /* Elastic.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD211B12EC78001D49EC /* Elastic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD4B1B12F322001D49EC /* Expo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD231B12EC78001D49EC /* Expo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD4C1B12F322001D49EC /* Linear.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD251B12EC78001D49EC /* Linear.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD4D1B12F322001D49EC /* Quad.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD271B12EC78001D49EC /* Quad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD4E1B12F322001D49EC /* Quart.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD291B12EC78001D49EC /* Quart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD4F1B12F322001D49EC /* Quint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD2B1B12EC78001D49EC /* Quint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD501B12F322001D49EC /* Sine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD2D1B12EC78001D49EC /* Sine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD511B12F338001D49EC /* CatmullRom.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD301B12EC83001D49EC /* CatmullRom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD521B12F338001D49EC /* LinearPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A41CD321B12EC83001D49EC /* LinearPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A41CD901B157178001D49EC /* CatmullRom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD2F1B12EC83001D49EC /* CatmullRom.cpp */; };
+		0A41CD911B15717D001D49EC /* LinearPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD311B12EC83001D49EC /* LinearPath.cpp */; };
+		0A41CD921B157185001D49EC /* Back.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD181B12EC78001D49EC /* Back.cpp */; };
+		0A41CD931B157185001D49EC /* Bounce.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD1A1B12EC78001D49EC /* Bounce.cpp */; };
+		0A41CD941B157185001D49EC /* Circ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD1C1B12EC78001D49EC /* Circ.cpp */; };
+		0A41CD951B157185001D49EC /* Cubic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD1E1B12EC78001D49EC /* Cubic.cpp */; };
+		0A41CD961B157185001D49EC /* Elastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD201B12EC78001D49EC /* Elastic.cpp */; };
+		0A41CD971B157185001D49EC /* Expo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD221B12EC78001D49EC /* Expo.cpp */; };
+		0A41CD981B157185001D49EC /* Linear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD241B12EC78001D49EC /* Linear.cpp */; };
+		0A41CD991B157185001D49EC /* Quad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD261B12EC78001D49EC /* Quad.cpp */; };
+		0A41CD9A1B157185001D49EC /* Quart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD281B12EC78001D49EC /* Quart.cpp */; };
+		0A41CD9B1B157185001D49EC /* Quint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD2A1B12EC78001D49EC /* Quint.cpp */; };
+		0A41CD9C1B157185001D49EC /* Sine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD2C1B12EC78001D49EC /* Sine.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A41CCD81B12EBF1001D49EC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A41CCDA1B12EBF1001D49EC /* libtween-engine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtween-engine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A41CD001B12EC55001D49EC /* BaseTween.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseTween.cpp; path = ../BaseTween.cpp; sourceTree = "<group>"; };
+		0A41CD011B12EC55001D49EC /* BaseTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTween.h; path = ../BaseTween.h; sourceTree = "<group>"; };
+		0A41CD021B12EC55001D49EC /* Pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pool.h; path = ../Pool.h; sourceTree = "<group>"; };
+		0A41CD031B12EC55001D49EC /* Tween.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tween.cpp; path = ../Tween.cpp; sourceTree = "<group>"; };
+		0A41CD041B12EC55001D49EC /* Tween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tween.h; path = ../Tween.h; sourceTree = "<group>"; };
+		0A41CD051B12EC55001D49EC /* TweenCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweenCallback.h; path = ../TweenCallback.h; sourceTree = "<group>"; };
+		0A41CD061B12EC55001D49EC /* TweenEquation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweenEquation.h; path = ../TweenEquation.h; sourceTree = "<group>"; };
+		0A41CD071B12EC55001D49EC /* TweenEquations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TweenEquations.cpp; path = ../TweenEquations.cpp; sourceTree = "<group>"; };
+		0A41CD081B12EC55001D49EC /* TweenEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweenEquations.h; path = ../TweenEquations.h; sourceTree = "<group>"; };
+		0A41CD091B12EC55001D49EC /* TweenManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TweenManager.cpp; path = ../TweenManager.cpp; sourceTree = "<group>"; };
+		0A41CD0A1B12EC55001D49EC /* TweenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweenManager.h; path = ../TweenManager.h; sourceTree = "<group>"; };
+		0A41CD0B1B12EC55001D49EC /* TweenPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweenPath.h; path = ../TweenPath.h; sourceTree = "<group>"; };
+		0A41CD0C1B12EC55001D49EC /* TweenPaths.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TweenPaths.cpp; path = ../TweenPaths.cpp; sourceTree = "<group>"; };
+		0A41CD0D1B12EC55001D49EC /* TweenPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweenPaths.h; path = ../TweenPaths.h; sourceTree = "<group>"; };
+		0A41CD0E1B12EC55001D49EC /* TweenPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TweenPool.cpp; path = ../TweenPool.cpp; sourceTree = "<group>"; };
+		0A41CD0F1B12EC55001D49EC /* TweenPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweenPool.h; path = ../TweenPool.h; sourceTree = "<group>"; };
+		0A41CD181B12EC78001D49EC /* Back.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Back.cpp; sourceTree = "<group>"; };
+		0A41CD191B12EC78001D49EC /* Back.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Back.h; sourceTree = "<group>"; };
+		0A41CD1A1B12EC78001D49EC /* Bounce.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bounce.cpp; sourceTree = "<group>"; };
+		0A41CD1B1B12EC78001D49EC /* Bounce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bounce.h; sourceTree = "<group>"; };
+		0A41CD1C1B12EC78001D49EC /* Circ.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circ.cpp; sourceTree = "<group>"; };
+		0A41CD1D1B12EC78001D49EC /* Circ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circ.h; sourceTree = "<group>"; };
+		0A41CD1E1B12EC78001D49EC /* Cubic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cubic.cpp; sourceTree = "<group>"; };
+		0A41CD1F1B12EC78001D49EC /* Cubic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cubic.h; sourceTree = "<group>"; };
+		0A41CD201B12EC78001D49EC /* Elastic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Elastic.cpp; sourceTree = "<group>"; };
+		0A41CD211B12EC78001D49EC /* Elastic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Elastic.h; sourceTree = "<group>"; };
+		0A41CD221B12EC78001D49EC /* Expo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Expo.cpp; sourceTree = "<group>"; };
+		0A41CD231B12EC78001D49EC /* Expo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Expo.h; sourceTree = "<group>"; };
+		0A41CD241B12EC78001D49EC /* Linear.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Linear.cpp; sourceTree = "<group>"; };
+		0A41CD251B12EC78001D49EC /* Linear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Linear.h; sourceTree = "<group>"; };
+		0A41CD261B12EC78001D49EC /* Quad.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Quad.cpp; sourceTree = "<group>"; };
+		0A41CD271B12EC78001D49EC /* Quad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quad.h; sourceTree = "<group>"; };
+		0A41CD281B12EC78001D49EC /* Quart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Quart.cpp; sourceTree = "<group>"; };
+		0A41CD291B12EC78001D49EC /* Quart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quart.h; sourceTree = "<group>"; };
+		0A41CD2A1B12EC78001D49EC /* Quint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Quint.cpp; sourceTree = "<group>"; };
+		0A41CD2B1B12EC78001D49EC /* Quint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quint.h; sourceTree = "<group>"; };
+		0A41CD2C1B12EC78001D49EC /* Sine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sine.cpp; sourceTree = "<group>"; };
+		0A41CD2D1B12EC78001D49EC /* Sine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sine.h; sourceTree = "<group>"; };
+		0A41CD2F1B12EC83001D49EC /* CatmullRom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CatmullRom.cpp; sourceTree = "<group>"; };
+		0A41CD301B12EC83001D49EC /* CatmullRom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatmullRom.h; sourceTree = "<group>"; };
+		0A41CD311B12EC83001D49EC /* LinearPath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearPath.cpp; sourceTree = "<group>"; };
+		0A41CD321B12EC83001D49EC /* LinearPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearPath.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A41CCD71B12EBF1001D49EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A41CCD11B12EBF1001D49EC = {
+			isa = PBXGroup;
+			children = (
+				0A41CCFF1B12EC1A001D49EC /* tween-engine */,
+				0A41CCDB1B12EBF1001D49EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A41CCDB1B12EBF1001D49EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A41CCDA1B12EBF1001D49EC /* libtween-engine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A41CCFF1B12EC1A001D49EC /* tween-engine */ = {
+			isa = PBXGroup;
+			children = (
+				0A41CD2E1B12EC83001D49EC /* paths */,
+				0A41CD171B12EC78001D49EC /* equations */,
+				0A41CD001B12EC55001D49EC /* BaseTween.cpp */,
+				0A41CD011B12EC55001D49EC /* BaseTween.h */,
+				0A41CD021B12EC55001D49EC /* Pool.h */,
+				0A41CD031B12EC55001D49EC /* Tween.cpp */,
+				0A41CD041B12EC55001D49EC /* Tween.h */,
+				0A41CD051B12EC55001D49EC /* TweenCallback.h */,
+				0A41CD061B12EC55001D49EC /* TweenEquation.h */,
+				0A41CD071B12EC55001D49EC /* TweenEquations.cpp */,
+				0A41CD081B12EC55001D49EC /* TweenEquations.h */,
+				0A41CD091B12EC55001D49EC /* TweenManager.cpp */,
+				0A41CD0A1B12EC55001D49EC /* TweenManager.h */,
+				0A41CD0B1B12EC55001D49EC /* TweenPath.h */,
+				0A41CD0C1B12EC55001D49EC /* TweenPaths.cpp */,
+				0A41CD0D1B12EC55001D49EC /* TweenPaths.h */,
+				0A41CD0E1B12EC55001D49EC /* TweenPool.cpp */,
+				0A41CD0F1B12EC55001D49EC /* TweenPool.h */,
+			);
+			name = "tween-engine";
+			sourceTree = "<group>";
+		};
+		0A41CD171B12EC78001D49EC /* equations */ = {
+			isa = PBXGroup;
+			children = (
+				0A41CD181B12EC78001D49EC /* Back.cpp */,
+				0A41CD191B12EC78001D49EC /* Back.h */,
+				0A41CD1A1B12EC78001D49EC /* Bounce.cpp */,
+				0A41CD1B1B12EC78001D49EC /* Bounce.h */,
+				0A41CD1C1B12EC78001D49EC /* Circ.cpp */,
+				0A41CD1D1B12EC78001D49EC /* Circ.h */,
+				0A41CD1E1B12EC78001D49EC /* Cubic.cpp */,
+				0A41CD1F1B12EC78001D49EC /* Cubic.h */,
+				0A41CD201B12EC78001D49EC /* Elastic.cpp */,
+				0A41CD211B12EC78001D49EC /* Elastic.h */,
+				0A41CD221B12EC78001D49EC /* Expo.cpp */,
+				0A41CD231B12EC78001D49EC /* Expo.h */,
+				0A41CD241B12EC78001D49EC /* Linear.cpp */,
+				0A41CD251B12EC78001D49EC /* Linear.h */,
+				0A41CD261B12EC78001D49EC /* Quad.cpp */,
+				0A41CD271B12EC78001D49EC /* Quad.h */,
+				0A41CD281B12EC78001D49EC /* Quart.cpp */,
+				0A41CD291B12EC78001D49EC /* Quart.h */,
+				0A41CD2A1B12EC78001D49EC /* Quint.cpp */,
+				0A41CD2B1B12EC78001D49EC /* Quint.h */,
+				0A41CD2C1B12EC78001D49EC /* Sine.cpp */,
+				0A41CD2D1B12EC78001D49EC /* Sine.h */,
+			);
+			name = equations;
+			path = ../equations;
+			sourceTree = "<group>";
+		};
+		0A41CD2E1B12EC83001D49EC /* paths */ = {
+			isa = PBXGroup;
+			children = (
+				0A41CD2F1B12EC83001D49EC /* CatmullRom.cpp */,
+				0A41CD301B12EC83001D49EC /* CatmullRom.h */,
+				0A41CD311B12EC83001D49EC /* LinearPath.cpp */,
+				0A41CD321B12EC83001D49EC /* LinearPath.h */,
+			);
+			name = paths;
+			path = ../paths;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A41CD3B1B12ED50001D49EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A41CD3C1B12EDC4001D49EC /* TweenManager.h in Headers */,
+				0A41CD3D1B12F23F001D49EC /* BaseTween.h in Headers */,
+				0A41CD3E1B12F2CF001D49EC /* Pool.h in Headers */,
+				0A41CD3F1B12F2CF001D49EC /* Tween.h in Headers */,
+				0A41CD401B12F2CF001D49EC /* TweenCallback.h in Headers */,
+				0A41CD411B12F2CF001D49EC /* TweenEquation.h in Headers */,
+				0A41CD421B12F2CF001D49EC /* TweenEquations.h in Headers */,
+				0A41CD431B12F2CF001D49EC /* TweenPath.h in Headers */,
+				0A41CD441B12F2CF001D49EC /* TweenPaths.h in Headers */,
+				0A41CD451B12F2CF001D49EC /* TweenPool.h in Headers */,
+				0A41CD511B12F338001D49EC /* CatmullRom.h in Headers */,
+				0A41CD521B12F338001D49EC /* LinearPath.h in Headers */,
+				0A41CD461B12F322001D49EC /* Back.h in Headers */,
+				0A41CD471B12F322001D49EC /* Bounce.h in Headers */,
+				0A41CD481B12F322001D49EC /* Circ.h in Headers */,
+				0A41CD491B12F322001D49EC /* Cubic.h in Headers */,
+				0A41CD4A1B12F322001D49EC /* Elastic.h in Headers */,
+				0A41CD4B1B12F322001D49EC /* Expo.h in Headers */,
+				0A41CD4C1B12F322001D49EC /* Linear.h in Headers */,
+				0A41CD4D1B12F322001D49EC /* Quad.h in Headers */,
+				0A41CD4E1B12F322001D49EC /* Quart.h in Headers */,
+				0A41CD4F1B12F322001D49EC /* Quint.h in Headers */,
+				0A41CD501B12F322001D49EC /* Sine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A41CCD91B12EBF1001D49EC /* tween-engine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A41CCEE1B12EBF1001D49EC /* Build configuration list for PBXNativeTarget "tween-engine" */;
+			buildPhases = (
+				0A41CCD61B12EBF1001D49EC /* Sources */,
+				0A41CCD71B12EBF1001D49EC /* Frameworks */,
+				0A41CCD81B12EBF1001D49EC /* CopyFiles */,
+				0A41CD3B1B12ED50001D49EC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tween-engine";
+			productName = "tween-engine";
+			productReference = 0A41CCDA1B12EBF1001D49EC /* libtween-engine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A41CCD21B12EBF1001D49EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Gozio Inc.";
+				TargetAttributes = {
+					0A41CCD91B12EBF1001D49EC = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 0A41CCD51B12EBF1001D49EC /* Build configuration list for PBXProject "tween-engine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A41CCD11B12EBF1001D49EC;
+			productRefGroup = 0A41CCDB1B12EBF1001D49EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A41CCD91B12EBF1001D49EC /* tween-engine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A41CCD61B12EBF1001D49EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A41CD921B157185001D49EC /* Back.cpp in Sources */,
+				0A41CD141B12EC55001D49EC /* TweenPaths.cpp in Sources */,
+				0A41CD901B157178001D49EC /* CatmullRom.cpp in Sources */,
+				0A41CD9B1B157185001D49EC /* Quint.cpp in Sources */,
+				0A41CD931B157185001D49EC /* Bounce.cpp in Sources */,
+				0A41CD991B157185001D49EC /* Quad.cpp in Sources */,
+				0A41CD951B157185001D49EC /* Cubic.cpp in Sources */,
+				0A41CD121B12EC55001D49EC /* TweenEquations.cpp in Sources */,
+				0A41CD961B157185001D49EC /* Elastic.cpp in Sources */,
+				0A41CD101B12EC55001D49EC /* BaseTween.cpp in Sources */,
+				0A41CD151B12EC55001D49EC /* TweenPool.cpp in Sources */,
+				0A41CD9C1B157185001D49EC /* Sine.cpp in Sources */,
+				0A41CD941B157185001D49EC /* Circ.cpp in Sources */,
+				0A41CD111B12EC55001D49EC /* Tween.cpp in Sources */,
+				0A41CD9A1B157185001D49EC /* Quart.cpp in Sources */,
+				0A41CD131B12EC55001D49EC /* TweenManager.cpp in Sources */,
+				0A41CD911B15717D001D49EC /* LinearPath.cpp in Sources */,
+				0A41CD971B157185001D49EC /* Expo.cpp in Sources */,
+				0A41CD981B157185001D49EC /* Linear.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A41CCEC1B12EBF1001D49EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0A41CCED1B12EBF1001D49EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A41CCEF1B12EBF1001D49EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = private;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0A41CCF01B12EBF1001D49EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = private;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A41CCD51B12EBF1001D49EC /* Build configuration list for PBXProject "tween-engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A41CCEC1B12EBF1001D49EC /* Debug */,
+				0A41CCED1B12EBF1001D49EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A41CCEE1B12EBF1001D49EC /* Build configuration list for PBXNativeTarget "tween-engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A41CCEF1B12EBF1001D49EC /* Debug */,
+				0A41CCF01B12EBF1001D49EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A41CCD21B12EBF1001D49EC /* Project object */;
+}

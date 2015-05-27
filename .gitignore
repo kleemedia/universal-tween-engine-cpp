@@ -1,3 +1,20 @@
+# IMPORTANT: If you committed to the git repository before you added this .gitignore file
+# you need to delete the excluded files manually from your git repository, to ensure, 
+# that they are not tracked anymore. To delete them from git, just do the following:
+# 
+#     git rm --cached FILENAME
+#
+# ... Then everything should be fine.
+
+# Exclude personal Xcode user settings
+xcuserdata/ 
+
+# Generated
+bin
+gen
+obj
+out
+
 # Compiled Object files
 *.slo
 *.lo
@@ -11,3 +28,8 @@
 *.lai
 *.la
 *.a
+
+# Other
+Thumbs.db
+.DS_Store
+tmp
