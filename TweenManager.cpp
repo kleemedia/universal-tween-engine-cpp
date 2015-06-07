@@ -89,7 +89,21 @@ namespace TweenEngine
 		if (object.isAutoStartEnabled) object.start();
 		return *this;
 	}
-    
+
+    /**
+    * Returns true if the manager contains any valid interpolation associated
+    * to the given target object.
+    */
+    bool TweenManager::containsTarget(Accessor target)
+    {
+        for (int i=0, n=(int)objects.size(); i<n; i++)
+        {
+            BaseTween *obj = objects[i];
+            if (obj->containsTarget(target)) return true;
+        }
+        return false;
+    }
+
 	/**
 	 * Kills every managed tweens and timelines.
 	 */
@@ -101,8 +115,22 @@ namespace TweenEngine
 			obj->kill();
 		}
 	}
-    
-	/**
+
+    /**
+    * Kills every tweens associated to the given target. Will also kill every
+    * timelines containing a tween associated to the given target.
+    */
+
+    void TweenManager::killTarget(Accessor target)
+    {
+        for (int i=0, n=(int)objects.size(); i<n; i++)
+        {
+            BaseTween *obj = objects[i];
+            obj->killTarget(target);
+        }
+    }
+
+    /**
 	 * Increases the minimum capacity of the manager. Defaults to 20.
 	 */
 	void TweenManager::ensureCapacity(int minCapacity) { objects.reserve(minCapacity); }

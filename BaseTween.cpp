@@ -346,7 +346,12 @@ namespace TweenEngine
     {
         return (step >= 0 && step <= repeatCnt*2) || repeatCnt < 0;
     }
-    
+
+    void BaseTween::killTarget(Accessor target)
+    {
+        if (containsTarget(target)) kill();
+    }
+
     // -------------------------------------------------------------------------
 	// Update engine
 	// -------------------------------------------------------------------------

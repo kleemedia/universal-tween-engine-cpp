@@ -80,7 +80,6 @@
 
 //#define NDEBUG
 #include <assert.h>
-#include <Block.h>
 
 #include "Tween.h"
 #include "TweenPool.h"
@@ -311,7 +310,6 @@ namespace TweenEngine
         delete waypoints;
         delete accessorBuffer;
         delete pathBuffer;
-        if (accessor != NULL) Block_release(accessor);
     }
 
     void Tween::reset()
@@ -330,19 +328,15 @@ namespace TweenEngine
 		if (pathBufferSize != (2+waypointsLimit)*combinedAttrsLimit) {
 			pathBuffer = new float[(2+waypointsLimit)*combinedAttrsLimit];
 		}
-        
-        if (accessor != NULL)
-        {
-            Block_release(accessor);
-            accessor = NULL;
-        }
+
+        accessor = NULL;
     }
     
     void Tween::setup(Accessor accessor, float duration)
     {
         assert(duration >= 0);
         
-        this->accessor = Block_copy(accessor);
+        this->accessor = accessor;
 		this->duration = duration;
     }
    
@@ -768,7 +762,12 @@ namespace TweenEngine
     {
 		accessor(ACCESSOR_WRITE, targetValues);
 	}
-    
+
+    bool Tween::containsTarget(Accessor target)
+    {
+        return (this->accessor == target);
+    }
+
     int Tween::getTweenCount() { return 1; }
 
     int Tween::getTimelineCount() { return 0; }

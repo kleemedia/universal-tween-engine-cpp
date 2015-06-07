@@ -17,8 +17,6 @@
 
 namespace TweenEngine
 {
-    typedef int (^Accessor)(int cmd, float *values);
-
     class TweenPool;
     class TweenPoolCallback;
     
@@ -62,6 +60,7 @@ namespace TweenEngine
         virtual void reset();
         virtual void forceStartValues();
         virtual void forceEndValues();
+        virtual bool containsTarget(Accessor target);
         virtual void initializeOverride();
         virtual void updateOverride(int step, int lastStep, bool isIterationStep, float delta);
         

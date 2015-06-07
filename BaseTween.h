@@ -27,10 +27,14 @@
 
 namespace TweenEngine
 {
+    typedef int (^Accessor)(int cmd, float *values);
+
     class TweenManager;
     
     class BaseTween
     {
+    friend class TweenManager;
+
     private:
         // General
         int step;
@@ -67,14 +71,17 @@ namespace TweenEngine
         virtual void reset();
         virtual void forceStartValues() = 0;
         virtual void forceEndValues() = 0;
+        virtual bool containsTarget(Accessor target) = 0;
         virtual void initializeOverride();
         virtual void updateOverride(int step, int lastStep, bool isIterationStep, float delta);
         virtual void forceToStart();
         virtual void forceToEnd(float time);
-        
+
         void callCallback(int type);
         bool isReverse(int step);
         bool isValid(int step);
+
+        void killTarget(Accessor target);
 
     public:
         virtual ~BaseTween() {}
