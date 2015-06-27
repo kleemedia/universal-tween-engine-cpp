@@ -51,18 +51,6 @@
 		0A41CD9C1B157185001D49EC /* Sine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD2C1B12EC78001D49EC /* Sine.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		0A41CCD81B12EBF1001D49EC /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		0A41CCDA1B12EBF1001D49EC /* libtween-engine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libtween-engine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A41CD001B12EC55001D49EC /* BaseTween.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseTween.cpp; path = ../BaseTween.cpp; sourceTree = "<group>"; };
@@ -243,10 +231,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A41CCEE1B12EBF1001D49EC /* Build configuration list for PBXNativeTarget "tween-engine" */;
 			buildPhases = (
+				0A41CD3B1B12ED50001D49EC /* Headers */,
 				0A41CCD61B12EBF1001D49EC /* Sources */,
 				0A41CCD71B12EBF1001D49EC /* Frameworks */,
-				0A41CCD81B12EBF1001D49EC /* CopyFiles */,
-				0A41CD3B1B12ED50001D49EC /* Headers */,
 			);
 			buildRules = (
 			);
@@ -400,9 +387,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = private;
+				PRIVATE_HEADERS_FOLDER_PATH = private/Tween;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include;
+				PUBLIC_HEADERS_FOLDER_PATH = include/Tween;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -411,9 +398,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = private;
+				PRIVATE_HEADERS_FOLDER_PATH = private/Tween;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = include;
+				PUBLIC_HEADERS_FOLDER_PATH = include/Tween;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
