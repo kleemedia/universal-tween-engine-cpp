@@ -391,7 +391,7 @@
 		0A41CCEF1B12EBF1001D49EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = private/Tween;
 				PRODUCT_NAME = Tween;
@@ -403,7 +403,7 @@
 		0A41CCF01B12EBF1001D49EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = private/Tween;
 				PRODUCT_NAME = Tween;
