@@ -5,6 +5,9 @@
 //  Licensed under Apache License 2.0 - http://www.apache.org/licenses/LICENSE-2.0
 //
 
+#if defined(_MSC_VER)
+#define _USE_MATH_DEFINES
+#endif
 #include "Elastic.h"
 #include <math.h>
 
@@ -15,13 +18,13 @@ namespace TweenEngine
         float p = period;
         if (t == 0) return 0;
         if (t == 1) return 1;
-        if (!isPeriodSet) p = 0.3;
+        if (!isPeriodSet) p = 0.3f;
         float s;
         if (!isAmplitudeSet || a < 1) {
-            a = 1;
-            s = p/4.0;
+            a = 1.0f;
+            s = p/4.0f;
         } else {
-            s = p/(2*M_PI) * (float)asin(1/a);
+            s = (float)(p/(2*M_PI) * asin(1/a));
         }
         t -= 1;
         return -(a*(float)pow(2,10*t) * (float)sin((t-s)*(2*M_PI)/p ));
@@ -39,9 +42,9 @@ namespace TweenEngine
         float s;
         if (!isAmplitudeSet || a < 1) {
             a = 1;
-            s = p/4.0;
+            s = p/4.0f;
         } else {
-            s = p/(2*M_PI) * (float)asin(1/a);
+            s = (float)(p/(2*M_PI) * asin(1/a));
         }
         return a*(float)pow(2,-10*t) * (float)sin((t-s)*(2*M_PI)/p ) + 1;
     }
@@ -59,9 +62,9 @@ namespace TweenEngine
         float s;
         if (!isAmplitudeSet || a < 1) {
             a = 1;
-            s = p/4.0;
+            s = p/4.0f;
         } else {
-            s = p/(2*M_PI) * (float)asin(1/a);
+            s = (float)(p/(2*M_PI) * asin(1/a));
         }
         if (t < 1) {
             t -= 1;

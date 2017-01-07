@@ -21,7 +21,7 @@ namespace TweenEngine
     const char *BackOut::toString() { return "Back.OUT"; }
     
     float BackInOut::compute(float t) {
-        float s=S*1.525;
+        float s=S*1.525f;
         t*=2;
         if (t < 1) {
             return 0.5f*(t*t*((s+1)*t - s));

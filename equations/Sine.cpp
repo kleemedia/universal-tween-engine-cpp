@@ -5,6 +5,10 @@
 //  Licensed under Apache License 2.0 - http://www.apache.org/licenses/LICENSE-2.0
 //
 
+#if defined(_MSC_VER)
+#define _USE_MATH_DEFINES
+#endif
+
 #include <math.h>
 #include "Sine.h"
 

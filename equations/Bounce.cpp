@@ -13,14 +13,14 @@ namespace TweenEngine
         if (t < (1/2.75)) {
             return 7.5625f*t*t;
         } else if (t < (2/2.75)) {
-            t = t - (1.5 / 2.75);
-            return (7.5625 * t * t + 0.75);
+            t = t - (1.5f / 2.75f);
+            return (7.5625f * t * t + 0.75f);
         } else if (t < (2.5/2.75)) {
-            t = t - (2.25 / 2.75);
-            return (7.5625 * t * t + 0.9375);
+            t = t - (2.25f / 2.75f);
+            return (7.5625f * t * t + 0.9375f);
         } else {
-            t = t - (2.625 / 2.75);
-            return (7.5625 * t * t + 0.984375);
+            t = t - (2.625f / 2.75f);
+            return (7.5625f * t * t + 0.984375f);
         }
     }
 

@@ -19,10 +19,10 @@ namespace TweenEngine
     float CircInOut::compute(float t) {
         t *= 2;
         if (t < 1) {
-            return (-0.5 * (sqrt(1 - t*t) - 1));
+            return (float)(-0.5 * (sqrt(1 - t*t) - 1));
         } else {
             t -= 2;
-            return (0.5 * (sqrt(1 - t*t) + 1));
+            return (float)(0.5 * (sqrt(1 - t*t) + 1));
         }
     }
     
