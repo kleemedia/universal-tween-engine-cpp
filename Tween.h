@@ -8,12 +8,15 @@
 #ifndef __Tween__
 #define __Tween__
 
+#include <functional>
 #include "BaseTween.h"
 #include "Pool.h"
 #include "TweenEquation.h"
 #include "TweenPath.h"
 #include "TweenEquations.h"
 #include "TweenPaths.h"
+
+using TweenAccessor = std::function<int(int, float *)>;
 
 namespace TweenEngine
 {
@@ -29,7 +32,9 @@ namespace TweenEngine
         static int waypointsLimit;
         
         // Main
-        TweenEquation *equation;
+		TweenAccessor accessor;
+		int targetId;
+		TweenEquation *equation;
         TweenPath *pathAlgorithm;
 
         // General
@@ -49,18 +54,15 @@ namespace TweenEngine
         float *pathBuffer;
         int pathBufferSize;
 
-        //static TweenPoolCallback *poolCallback;
         static TweenPool &pool;
 
-        Accessor accessor;
-        
-        void setup(Accessor accessor, float duration);
+        void setup(int target, TweenAccessor accessor, float duration);
         
     protected:
         virtual void reset();
         virtual void forceStartValues();
         virtual void forceEndValues();
-        virtual bool containsTarget(Accessor target);
+        virtual bool containsTarget(int targetId);
         virtual void initializeOverride();
         virtual void updateOverride(int step, int lastStep, bool isIterationStep, float delta);
         
@@ -75,9 +77,9 @@ namespace TweenEngine
         static size_t getPoolSize();
         static void ensurePoolCapacity(int minCapacity);
       
-        static Tween &to(Accessor accessor, float duration);
-        static Tween &from(Accessor accessor, float duration);
-        static Tween &set(Accessor accessor);
+        static Tween &to(int targetId, TweenAccessor accessor, float duration);
+        static Tween &from(int targetId, TweenAccessor accessor, float duration);
+        static Tween &set(int targetId, TweenAccessor accessor);
         static Tween &call(TweenCallback &callback);
         static Tween &mark();
         

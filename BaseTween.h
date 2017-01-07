@@ -27,8 +27,6 @@
 
 namespace TweenEngine
 {
-    typedef int (^Accessor)(int cmd, float *values);
-
     class TweenManager;
     
     class BaseTween
@@ -71,7 +69,7 @@ namespace TweenEngine
         virtual void reset();
         virtual void forceStartValues() = 0;
         virtual void forceEndValues() = 0;
-        virtual bool containsTarget(Accessor target) = 0;
+        virtual bool containsTarget(int target) = 0;
         virtual void initializeOverride();
         virtual void updateOverride(int step, int lastStep, bool isIterationStep, float delta);
         virtual void forceToStart();
@@ -81,7 +79,7 @@ namespace TweenEngine
         bool isReverse(int step);
         bool isValid(int step);
 
-        void killTarget(Accessor target);
+        void killTarget(int target);
 
     public:
         virtual ~BaseTween() {}

@@ -94,12 +94,12 @@ namespace TweenEngine
     * Returns true if the manager contains any valid interpolation associated
     * to the given target object.
     */
-    bool TweenManager::containsTarget(Accessor target)
+    bool TweenManager::containsTarget(int targetId)
     {
         for (int i=0, n=(int)objects.size(); i<n; i++)
         {
             BaseTween *obj = objects[i];
-            if (obj->containsTarget(target)) return true;
+            if (obj->containsTarget(targetId)) return true;
         }
         return false;
     }
@@ -121,12 +121,12 @@ namespace TweenEngine
     * timelines containing a tween associated to the given target.
     */
 
-    void TweenManager::killTarget(Accessor target)
+    void TweenManager::killTarget(int targetId)
     {
         for (int i=0, n=(int)objects.size(); i<n; i++)
         {
             BaseTween *obj = objects[i];
-            obj->killTarget(target);
+            obj->killTarget(targetId);
         }
     }
 

@@ -154,10 +154,10 @@ namespace TweenEngine
 	 * @param duration The duration of the interpolation, in milliseconds.
 	 * @return The generated Tween.
 	 */
-	Tween &Tween::to(Accessor accessor, float duration)
+	Tween &Tween::to(int targetId, TweenAccessor accessor, float duration)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(accessor, duration);
+		tween.setup(targetId, accessor, duration);
         tween.ease(TweenEquations::easeInOutQuad);
 		tween.path(TweenPaths::catmullRom);
 		return tween;
@@ -193,10 +193,10 @@ namespace TweenEngine
 	 * @param duration The duration of the interpolation, in milliseconds.
 	 * @return The generated Tween.
 	 */
-	Tween &Tween::from(Accessor accessor, float duration)
+	Tween &Tween::from(int targetId, TweenAccessor accessor, float duration)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(accessor, duration);
+		tween.setup(targetId, accessor, duration);
         tween.ease(TweenEquations::easeInOutQuad);
 		tween.path(TweenPaths::catmullRom);
 		tween.isFrom = true;
@@ -232,10 +232,10 @@ namespace TweenEngine
 	 * @param tweenType The desired type of interpolation.
 	 * @return The generated Tween.
 	 */
-	Tween &Tween::set(Accessor accessor)
+	Tween &Tween::set(int targetId, TweenAccessor accessor)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(accessor, 0);
+		tween.setup(targetId, accessor, 0);
         tween.ease(TweenEquations::easeInOutQuad);
 		return tween;
 	}
@@ -265,7 +265,7 @@ namespace TweenEngine
 	Tween &Tween::call(TweenCallback &callback)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(NULL, 0);
+		tween.setup(0, NULL, 0);
 		tween.setCallback(&callback);
 		tween.setCallbackTriggers(TweenCallback::START);
 		return tween;
@@ -283,7 +283,7 @@ namespace TweenEngine
 	Tween &Tween::mark()
     {
 		Tween &tween = *(pool.get());
-		tween.setup(NULL, 0);
+		tween.setup(0, NULL, 0);
 		return tween;
 	}
     
@@ -301,6 +301,7 @@ namespace TweenEngine
         pathBuffer = new float[(2+waypointsLimit)*combinedAttrsLimit];
         pathBufferSize = (2+waypointsLimit)*combinedAttrsLimit;
         accessor = NULL;
+		targetId = 0;
     }
     
     Tween::~Tween()
@@ -330,12 +331,14 @@ namespace TweenEngine
 		}
 
         accessor = NULL;
+		targetId = 0;
     }
     
-    void Tween::setup(Accessor accessor, float duration)
+    void Tween::setup(int targetId, TweenAccessor accessor, float duration)
     {
         assert(duration >= 0);
         
+		this->targetId = targetId;
         this->accessor = accessor;
 		this->duration = duration;
     }
@@ -763,9 +766,9 @@ namespace TweenEngine
 		accessor(ACCESSOR_WRITE, targetValues);
 	}
 
-    bool Tween::containsTarget(Accessor target)
+    bool Tween::containsTarget(int targetId)
     {
-        return (this->accessor == target);
+        return (this->targetId == targetId);
     }
 
     int Tween::getTweenCount() { return 1; }
