@@ -154,10 +154,10 @@ namespace TweenEngine
 	 * @param duration The duration of the interpolation, in milliseconds.
 	 * @return The generated Tween.
 	 */
-	Tween &Tween::to(int targetId, TweenAccessor accessor, float duration)
+	Tween &Tween::to(int targetId, float duration, TweenAccessor accessor)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(targetId, accessor, duration);
+		tween.setup(targetId, duration, accessor);
         tween.ease(TweenEquations::easeInOutQuad);
 		tween.path(TweenPaths::catmullRom);
 		return tween;
@@ -193,10 +193,10 @@ namespace TweenEngine
 	 * @param duration The duration of the interpolation, in milliseconds.
 	 * @return The generated Tween.
 	 */
-	Tween &Tween::from(int targetId, TweenAccessor accessor, float duration)
+	Tween &Tween::from(int targetId, float duration, TweenAccessor accessor)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(targetId, accessor, duration);
+		tween.setup(targetId, duration, accessor);
         tween.ease(TweenEquations::easeInOutQuad);
 		tween.path(TweenPaths::catmullRom);
 		tween.isFrom = true;
@@ -235,7 +235,7 @@ namespace TweenEngine
 	Tween &Tween::set(int targetId, TweenAccessor accessor)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(targetId, accessor, 0);
+		tween.setup(targetId, 0, accessor);
         tween.ease(TweenEquations::easeInOutQuad);
 		return tween;
 	}
@@ -334,14 +334,14 @@ namespace TweenEngine
 		targetId = 0;
     }
     
-    void Tween::setup(int targetId, TweenAccessor accessor, float duration)
+    void Tween::setup(int targetId, float duration, TweenAccessor accessor)
     {
         assert(duration >= 0);
         
 		this->targetId = targetId;
-        this->accessor = accessor;
 		this->duration = duration;
-    }
+		this->accessor = accessor;
+	}
    
     // -------------------------------------------------------------------------
 	// Public API

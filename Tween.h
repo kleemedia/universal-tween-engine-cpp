@@ -56,7 +56,7 @@ namespace TweenEngine
 
         static TweenPool &pool;
 
-        void setup(int target, TweenAccessor accessor, float duration);
+        void setup(int target, float duration, TweenAccessor accessor);
         
     protected:
         virtual void reset();
@@ -77,8 +77,8 @@ namespace TweenEngine
         static size_t getPoolSize();
         static void ensurePoolCapacity(int minCapacity);
       
-        static Tween &to(int targetId, TweenAccessor accessor, float duration);
-        static Tween &from(int targetId, TweenAccessor accessor, float duration);
+        static Tween &to(int targetId, float duration, TweenAccessor accessor);
+        static Tween &from(int targetId, float duration, TweenAccessor accessor);
         static Tween &set(int targetId, TweenAccessor accessor);
         static Tween &call(TweenCallback &callback);
         static Tween &mark();

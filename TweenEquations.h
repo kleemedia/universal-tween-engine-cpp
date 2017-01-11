@@ -8,17 +8,17 @@
 #ifndef __TweenEquations__
 #define __TweenEquations__
 
-#include "Quad.h"
-#include "Linear.h"
-#include "Back.h"
-#include "Bounce.h"
-#include "Circ.h"
-#include "Cubic.h"
-#include "Elastic.h"
-#include "Expo.h"
-#include "Quart.h"
-#include "Quint.h"
-#include "Sine.h"
+#include "equations/Quad.h"
+#include "equations/Linear.h"
+#include "equations/Back.h"
+#include "equations/Bounce.h"
+#include "equations/Circ.h"
+#include "equations/Cubic.h"
+#include "equations/Elastic.h"
+#include "equations/Expo.h"
+#include "equations/Quart.h"
+#include "equations/Quint.h"
+#include "equations/Sine.h"
 
 namespace TweenEngine
 {
