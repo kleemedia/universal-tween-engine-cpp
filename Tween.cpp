@@ -104,7 +104,7 @@ namespace TweenEngine
 	/**
 	 * Gets the version number of the library.
 	 */
-	const char *Tween::getVersion() { return "6.3.3"; }
+	const char *Tween::getVersion() { return "7.0.0"; }
    
 	/**
 	 * Used for debug purpose. Gets the current number of objects that are
