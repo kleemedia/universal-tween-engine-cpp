@@ -347,9 +347,9 @@ namespace TweenEngine
         return (step >= 0 && step <= repeatCnt*2) || repeatCnt < 0;
     }
 
-    void BaseTween::killTarget(int target)
+    void BaseTween::killTarget(TweenHandle tweenHandle)
     {
-        if (containsTarget(target)) kill();
+        if (containsTarget(tweenHandle)) kill();
     }
 
     // -------------------------------------------------------------------------

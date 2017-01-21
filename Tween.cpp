@@ -154,10 +154,10 @@ namespace TweenEngine
 	 * @param duration The duration of the interpolation, in milliseconds.
 	 * @return The generated Tween.
 	 */
-	Tween &Tween::to(int targetId, float duration, TweenAccessor accessor)
+	Tween &Tween::to(TweenHandle tweenHandle, float duration, TweenAccessor accessor)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(targetId, duration, accessor);
+		tween.setup(tweenHandle, duration, accessor);
         tween.ease(TweenEquations::easeInOutQuad);
 		tween.path(TweenPaths::catmullRom);
 		return tween;
@@ -193,10 +193,10 @@ namespace TweenEngine
 	 * @param duration The duration of the interpolation, in milliseconds.
 	 * @return The generated Tween.
 	 */
-	Tween &Tween::from(int targetId, float duration, TweenAccessor accessor)
+	Tween &Tween::from(TweenHandle tweenHandle, float duration, TweenAccessor accessor)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(targetId, duration, accessor);
+		tween.setup(tweenHandle, duration, accessor);
         tween.ease(TweenEquations::easeInOutQuad);
 		tween.path(TweenPaths::catmullRom);
 		tween.isFrom = true;
@@ -232,10 +232,10 @@ namespace TweenEngine
 	 * @param tweenType The desired type of interpolation.
 	 * @return The generated Tween.
 	 */
-	Tween &Tween::set(int targetId, TweenAccessor accessor)
+	Tween &Tween::set(TweenHandle tweenHandle, TweenAccessor accessor)
     {
 		Tween &tween = *(pool.get());
-		tween.setup(targetId, 0, accessor);
+		tween.setup(tweenHandle, 0, accessor);
         tween.ease(TweenEquations::easeInOutQuad);
 		return tween;
 	}
@@ -301,7 +301,7 @@ namespace TweenEngine
         pathBuffer = new float[(2+waypointsLimit)*combinedAttrsLimit];
         pathBufferSize = (2+waypointsLimit)*combinedAttrsLimit;
         accessor = NULL;
-		targetId = 0;
+		tweenHandle = 0;
     }
     
     Tween::~Tween()
@@ -331,14 +331,14 @@ namespace TweenEngine
 		}
 
         accessor = NULL;
-		targetId = 0;
+		tweenHandle = 0;
     }
     
-    void Tween::setup(int targetId, float duration, TweenAccessor accessor)
+    void Tween::setup(TweenHandle tweenHandle, float duration, TweenAccessor accessor)
     {
         assert(duration >= 0);
         
-		this->targetId = targetId;
+		this->tweenHandle = tweenHandle;
 		this->duration = duration;
 		this->accessor = accessor;
 	}
@@ -538,6 +538,27 @@ namespace TweenEngine
 		return *this;
 	}
 
+	/**
+	* Adds a waypoint to the path. The default path runs from the start values
+	* to the end values linearly. If you add waypoints, the default path will
+	* use a smooth catmull-rom spline to navigate between the waypoints, but
+	* you can change this behavior by using the {@link #path(TweenPath)}
+	* method.
+	*
+	* @param targetValue The target of this waypoint.
+	* @return The current tween, for chaining instructions.
+	*/
+	Tween &Tween::waypoint(float targetValue)
+	{
+		if (waypointsCnt < waypointsLimit)
+		{
+			waypoints[waypointsCnt] = targetValue;
+			waypointsCnt += 1;
+		}
+
+		return *this;
+	}
+
     /**
 	 * Adds a waypoint to the path. The default path runs from the start values
 	 * to the end values linearly. If you add waypoints, the default path will
@@ -563,7 +584,7 @@ namespace TweenEngine
         
 		return *this;
 	}
-    
+
 	/**
 	 * Adds a waypoint to the path. The default path runs from the start values
 	 * to the end values linearly. If you add waypoints, the default path will
@@ -634,6 +655,11 @@ namespace TweenEngine
     // -------------------------------------------------------------------------
 	// Getters
 	// -------------------------------------------------------------------------
+
+	/**
+	* Gets the tween handle.
+	*/
+	TweenHandle Tween::getHandle() { return tweenHandle; }
 
 	/**
 	 * Gets the easing equation.
@@ -766,9 +792,9 @@ namespace TweenEngine
 		accessor(ACCESSOR_WRITE, targetValues);
 	}
 
-    bool Tween::containsTarget(int targetId)
+    bool Tween::containsTarget(TweenHandle tweenHandle)
     {
-        return (this->targetId == targetId);
+        return (this->tweenHandle == tweenHandle);
     }
 
     int Tween::getTweenCount() { return 1; }

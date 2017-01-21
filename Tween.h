@@ -33,7 +33,7 @@ namespace TweenEngine
         
         // Main
 		TweenAccessor accessor;
-		int targetId;
+		TweenHandle tweenHandle;
 		TweenEquation *equation;
         TweenPath *pathAlgorithm;
 
@@ -56,13 +56,13 @@ namespace TweenEngine
 
         static TweenPool &pool;
 
-        void setup(int target, float duration, TweenAccessor accessor);
+        void setup(TweenHandle tweenHandle, float duration, TweenAccessor accessor);
         
     protected:
         virtual void reset();
         virtual void forceStartValues();
         virtual void forceEndValues();
-        virtual bool containsTarget(int targetId);
+        virtual bool containsTarget(TweenHandle tweenHandle);
         virtual void initializeOverride();
         virtual void updateOverride(int step, int lastStep, bool isIterationStep, float delta);
         
@@ -77,9 +77,9 @@ namespace TweenEngine
         static size_t getPoolSize();
         static void ensurePoolCapacity(int minCapacity);
       
-        static Tween &to(int targetId, float duration, TweenAccessor accessor);
-        static Tween &from(int targetId, float duration, TweenAccessor accessor);
-        static Tween &set(int targetId, TweenAccessor accessor);
+        static Tween &to(TweenHandle tweenHandle, float duration, TweenAccessor accessor);
+        static Tween &from(TweenHandle tweenHandle, float duration, TweenAccessor accessor);
+        static Tween &set(TweenHandle tweenHandle, TweenAccessor accessor);
         static Tween &call(TweenCallback &callback);
         static Tween &mark();
         
@@ -106,8 +106,8 @@ namespace TweenEngine
         Tween &waypoint(float targetValue1, float targetValue2, float targetValue3);
         Tween &waypoint(float *targetValues, int len);
         Tween &path(TweenPath &path);
-        int getType();
         TweenEquation *getEasing();
+		TweenHandle getHandle();
         float *getTargetValues();
         int getCombinedAttributesCount();
 

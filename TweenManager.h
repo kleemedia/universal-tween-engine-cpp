@@ -43,9 +43,9 @@ namespace TweenEngine
         static void setAutoStart(BaseTween &object, bool value);
         
         TweenManager &add(BaseTween &object);
-        bool containsTarget(int targetId);
+        bool containsTarget(TweenHandle tweenHandle);
         void killAll();
-        void killTarget(int targetId);
+        void killTarget(TweenHandle tweenHandle);
         void ensureCapacity(int minCapacity);
         void pause();
         void resume();

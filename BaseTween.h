@@ -23,10 +23,13 @@
 #ifndef __BaseTween__
 #define __BaseTween__
 
+#include <cstdint>
 #include "TweenCallback.h"
 
 namespace TweenEngine
 {
+	typedef uint64_t TweenHandle;
+
     class TweenManager;
     
     class BaseTween
@@ -69,7 +72,7 @@ namespace TweenEngine
         virtual void reset();
         virtual void forceStartValues() = 0;
         virtual void forceEndValues() = 0;
-        virtual bool containsTarget(int target) = 0;
+        virtual bool containsTarget(TweenHandle tweenHandle) = 0;
         virtual void initializeOverride();
         virtual void updateOverride(int step, int lastStep, bool isIterationStep, float delta);
         virtual void forceToStart();
@@ -79,7 +82,7 @@ namespace TweenEngine
         bool isReverse(int step);
         bool isValid(int step);
 
-        void killTarget(int target);
+        void killTarget(TweenHandle tweenHandle);
 
     public:
         virtual ~BaseTween() {}
