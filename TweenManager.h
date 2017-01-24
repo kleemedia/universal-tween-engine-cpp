@@ -36,9 +36,13 @@ namespace TweenEngine
 
         bool isPaused = false;
 
+		TweenHandle		nextTweenHandle;
+
     public:
         TweenManager();
         
+		static const TweenHandle INVALID_HANDLE = 0;
+
         static void setAutoRemove(BaseTween &object, bool value);
         static void setAutoStart(BaseTween &object, bool value);
         
@@ -52,6 +56,8 @@ namespace TweenEngine
         void update(float delta);
         size_t size();
         
+		TweenHandle getNextTweenHandle();
+
         // Debug Helpers
         int getRunningTweensCount();
         int getRunningTimelinesCount();

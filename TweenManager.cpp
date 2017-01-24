@@ -75,7 +75,13 @@ namespace TweenEngine
     TweenManager::TweenManager() : objects()
     {
         objects.reserve(20);
+		nextTweenHandle = 1;
     }
+
+	TweenHandle TweenManager::getNextTweenHandle()
+	{
+		return nextTweenHandle++;
+	}
 
     /**
 	 * Adds a tween or timeline to the manager and starts or restarts it.
@@ -96,7 +102,9 @@ namespace TweenEngine
     */
     bool TweenManager::containsTarget(TweenHandle tweenHandle)
     {
-        for (int i=0, n=(int)objects.size(); i<n; i++)
+		if (tweenHandle == INVALID_HANDLE) return false;
+
+		for (int i=0, n=(int)objects.size(); i<n; i++)
         {
             BaseTween *obj = objects[i];
             if (obj->containsTarget(tweenHandle)) return true;
@@ -123,6 +131,7 @@ namespace TweenEngine
 
     void TweenManager::killTarget(TweenHandle tweenHandle)
     {
+		if (tweenHandle == INVALID_HANDLE) return;
         for (int i=0, n=(int)objects.size(); i<n; i++)
         {
             BaseTween *obj = objects[i];
