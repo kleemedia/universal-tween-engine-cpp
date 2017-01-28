@@ -236,6 +236,7 @@ namespace TweenEngine
     {
 		Tween &tween = *(pool.get());
 		tween.setup(tweenHandle, 0, accessor);
+        tween.setup(tweenHandle, 0.0f, accessor);
         tween.ease(TweenEquations::easeInOutQuad);
 		return tween;
 	}
@@ -266,6 +267,7 @@ namespace TweenEngine
     {
 		Tween &tween = *(pool.get());
 		tween.setup(0, NULL, 0);
+		tween.setup(0, 0.0f, nullptr);
 		tween.setCallback(&callback);
 		tween.setCallbackTriggers(TweenCallback::START);
 		return tween;
@@ -284,6 +286,7 @@ namespace TweenEngine
     {
 		Tween &tween = *(pool.get());
 		tween.setup(0, NULL, 0);
+        tween.setup(0, 0.0f, nullptr);
 		return tween;
 	}
     
