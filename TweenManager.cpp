@@ -102,7 +102,7 @@ namespace TweenEngine
     */
     bool TweenManager::containsTarget(TweenHandle tweenHandle)
     {
-		if (tweenHandle == INVALID_HANDLE) return false;
+		if (tweenHandle == INVALID_TWEEN_HANDLE) return false;
 
 		for (int i=0, n=(int)objects.size(); i<n; i++)
         {
@@ -131,7 +131,7 @@ namespace TweenEngine
 
     void TweenManager::killTarget(TweenHandle tweenHandle)
     {
-		if (tweenHandle == INVALID_HANDLE) return;
+		if (tweenHandle == INVALID_TWEEN_HANDLE) return;
         for (int i=0, n=(int)objects.size(); i<n; i++)
         {
             BaseTween *obj = objects[i];

@@ -41,7 +41,7 @@ namespace TweenEngine
     public:
         TweenManager();
         
-		static const TweenHandle INVALID_HANDLE = 0;
+		static const TweenHandle INVALID_TWEEN_HANDLE = 0;
 
         static void setAutoRemove(BaseTween &object, bool value);
         static void setAutoStart(BaseTween &object, bool value);
