@@ -26,19 +26,19 @@
 		0A41CD9A1B157185001D49EC /* Quart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD281B12EC78001D49EC /* Quart.cpp */; };
 		0A41CD9B1B157185001D49EC /* Quint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD2A1B12EC78001D49EC /* Quint.cpp */; };
 		0A41CD9C1B157185001D49EC /* Sine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A41CD2C1B12EC78001D49EC /* Sine.cpp */; };
+		0A6C4F9B1E6F9D99005E56BF /* Back.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD191B12EC78001D49EC /* Back.h */; };
+		0A6C4F9C1E6F9D99005E56BF /* Bounce.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD1B1B12EC78001D49EC /* Bounce.h */; };
+		0A6C4F9D1E6F9D99005E56BF /* Circ.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD1D1B12EC78001D49EC /* Circ.h */; };
+		0A6C4F9E1E6F9D99005E56BF /* Cubic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD1F1B12EC78001D49EC /* Cubic.h */; };
+		0A6C4F9F1E6F9D99005E56BF /* Elastic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD211B12EC78001D49EC /* Elastic.h */; };
+		0A6C4FA01E6F9D99005E56BF /* Expo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD231B12EC78001D49EC /* Expo.h */; };
+		0A6C4FA11E6F9D99005E56BF /* Linear.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD251B12EC78001D49EC /* Linear.h */; };
+		0A6C4FA21E6F9D99005E56BF /* Quad.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD271B12EC78001D49EC /* Quad.h */; };
+		0A6C4FA31E6F9D99005E56BF /* Quart.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD291B12EC78001D49EC /* Quart.h */; };
+		0A6C4FA41E6F9D99005E56BF /* Quint.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD2B1B12EC78001D49EC /* Quint.h */; };
+		0A6C4FA51E6F9D99005E56BF /* Sine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD2D1B12EC78001D49EC /* Sine.h */; };
 		0A9367821B6AA37B00394E8B /* CatmullRom.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD301B12EC83001D49EC /* CatmullRom.h */; };
 		0A9367831B6AA37B00394E8B /* LinearPath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD321B12EC83001D49EC /* LinearPath.h */; };
-		0A9367841B6AA39500394E8B /* Back.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD191B12EC78001D49EC /* Back.h */; };
-		0A9367851B6AA39500394E8B /* Bounce.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD1B1B12EC78001D49EC /* Bounce.h */; };
-		0A9367861B6AA39500394E8B /* Circ.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD1D1B12EC78001D49EC /* Circ.h */; };
-		0A9367871B6AA39500394E8B /* Cubic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD1F1B12EC78001D49EC /* Cubic.h */; };
-		0A9367881B6AA39500394E8B /* Elastic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD211B12EC78001D49EC /* Elastic.h */; };
-		0A9367891B6AA39500394E8B /* Expo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD231B12EC78001D49EC /* Expo.h */; };
-		0A93678A1B6AA39500394E8B /* Linear.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD251B12EC78001D49EC /* Linear.h */; };
-		0A93678B1B6AA39500394E8B /* Quad.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD271B12EC78001D49EC /* Quad.h */; };
-		0A93678C1B6AA39500394E8B /* Quart.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD291B12EC78001D49EC /* Quart.h */; };
-		0A93678D1B6AA39500394E8B /* Quint.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD2B1B12EC78001D49EC /* Quint.h */; };
-		0A93678E1B6AA39500394E8B /* Sine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD2D1B12EC78001D49EC /* Sine.h */; };
 		0A93678F1B6AA39500394E8B /* BaseTween.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD011B12EC55001D49EC /* BaseTween.h */; };
 		0A9367901B6AA39500394E8B /* Pool.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD021B12EC55001D49EC /* Pool.h */; };
 		0A9367911B6AA39500394E8B /* Tween.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A41CD041B12EC55001D49EC /* Tween.h */; };
@@ -52,23 +52,32 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0A6C4F9A1E6F9D74005E56BF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)/equations";
+			dstSubfolderSpec = 16;
+			files = (
+				0A6C4F9B1E6F9D99005E56BF /* Back.h in CopyFiles */,
+				0A6C4F9C1E6F9D99005E56BF /* Bounce.h in CopyFiles */,
+				0A6C4F9D1E6F9D99005E56BF /* Circ.h in CopyFiles */,
+				0A6C4F9E1E6F9D99005E56BF /* Cubic.h in CopyFiles */,
+				0A6C4F9F1E6F9D99005E56BF /* Elastic.h in CopyFiles */,
+				0A6C4FA01E6F9D99005E56BF /* Expo.h in CopyFiles */,
+				0A6C4FA11E6F9D99005E56BF /* Linear.h in CopyFiles */,
+				0A6C4FA21E6F9D99005E56BF /* Quad.h in CopyFiles */,
+				0A6C4FA31E6F9D99005E56BF /* Quart.h in CopyFiles */,
+				0A6C4FA41E6F9D99005E56BF /* Quint.h in CopyFiles */,
+				0A6C4FA51E6F9D99005E56BF /* Sine.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A9367811B6AA35E00394E8B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				0A9367841B6AA39500394E8B /* Back.h in CopyFiles */,
-				0A9367851B6AA39500394E8B /* Bounce.h in CopyFiles */,
-				0A9367861B6AA39500394E8B /* Circ.h in CopyFiles */,
-				0A9367871B6AA39500394E8B /* Cubic.h in CopyFiles */,
-				0A9367881B6AA39500394E8B /* Elastic.h in CopyFiles */,
-				0A9367891B6AA39500394E8B /* Expo.h in CopyFiles */,
-				0A93678A1B6AA39500394E8B /* Linear.h in CopyFiles */,
-				0A93678B1B6AA39500394E8B /* Quad.h in CopyFiles */,
-				0A93678C1B6AA39500394E8B /* Quart.h in CopyFiles */,
-				0A93678D1B6AA39500394E8B /* Quint.h in CopyFiles */,
-				0A93678E1B6AA39500394E8B /* Sine.h in CopyFiles */,
 				0A93678F1B6AA39500394E8B /* BaseTween.h in CopyFiles */,
 				0A9367901B6AA39500394E8B /* Pool.h in CopyFiles */,
 				0A9367911B6AA39500394E8B /* Tween.h in CopyFiles */,
@@ -236,6 +245,7 @@
 				0A41CCD61B12EBF1001D49EC /* Sources */,
 				0A41CCD71B12EBF1001D49EC /* Frameworks */,
 				0A9367811B6AA35E00394E8B /* CopyFiles */,
+				0A6C4F9A1E6F9D74005E56BF /* CopyFiles */,
 			);
 			buildRules = (
 			);
