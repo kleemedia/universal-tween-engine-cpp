@@ -86,7 +86,7 @@
 
 namespace TweenEngine
 {
-    int Tween::combinedAttrsLimit = 3;
+    int Tween::combinedAttrsLimit = 4;
     int Tween::waypointsLimit = 0;
     
 	/**
