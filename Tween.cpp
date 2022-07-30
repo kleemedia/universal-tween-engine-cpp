@@ -78,7 +78,6 @@
  * @author Aurelien Ribon | http://www.aurelienribon.com/
  */
 
-//#define NDEBUG
 #include <assert.h>
 
 #include "Tween.h"
